@@ -28,7 +28,6 @@ class UserController extends Controller
             'password' => bcrypt($validated['password']),
         ]);
 
-        return redirect()->route('users.create')
-            ->with('success', 'Registrazione avvenuta con successo!');
+        return redirect()->route('users.create')->with('success', 'Registrazione avvenuta con successo!');
     }
 }
